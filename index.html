@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>活動設計・半馬拉松跑步｜2026 活動報名</title>
+  <meta name="description" content="2026 半馬拉松跑步活動報名頁：2026 年 6 月 30 日，台北／淡水河。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <p class="brand">2026 活動報名</p>
+      <nav class="site-nav">
+        <a href="#info">活動資訊</a>
+        <a href="#about">活動介紹</a>
+        <a href="#register">立即報名</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 主視覺 -->
+    <section class="hero">
+      <div class="container">
+        <p class="hero-kicker">Nordic Run · Taipei</p>
+        <h1>活動設計・半馬拉松跑步</h1>
+        <p class="hero-sub">在夏日河畔，用步伐感受北歐式的純粹與節奏。</p>
+        <a class="btn btn-primary" href="#register">立即報名</a>
+      </div>
+    </section>
+
+    <!-- 活動資訊 -->
+    <section id="info" class="section">
+      <div class="container">
+        <h2 class="section-title">活動資訊</h2>
+        <dl class="info-grid">
+          <div class="info-item">
+            <dt>日期</dt>
+            <dd>2026 年 6 月 30 日（五）</dd>
+          </div>
+          <div class="info-item">
+            <dt>時間</dt>
+            <dd>09:30–13:00</dd>
+          </div>
+          <div class="info-item">
+            <dt>地點</dt>
+            <dd>台北／淡水河</dd>
+          </div>
+          <div class="info-item">
+            <dt>活動形式</dt>
+            <dd>馬拉松活動</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 活動介紹 -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">活動介紹</h2>
+        <p class="about-text">透過半馬拉松跑步，增強體力，提升工作與身體機能。</p>
+      </div>
+    </section>
+
+    <!-- 活動圖片：跑步活動、淡水河風景、夏日、歡樂氣氛 -->
+    <section class="section">
+      <div class="container">
+        <div class="gallery">
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=900&q=80"
+              alt="清晨在城市道路上跑步的跑者"
+              loading="lazy"
+            />
+            <figcaption>跑步活動</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?auto=format&fit=crop&w=900&q=80"
+              alt="淡水河夏日河岸風景"
+              loading="lazy"
+            />
+            <figcaption>淡水河風景</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=80"
+              alt="夏日夕陽下的原野"
+              loading="lazy"
+            />
+            <figcaption>夏日</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=900&q=80"
+              alt="五彩紙屑中歡慶的人群"
+              loading="lazy"
+            />
+            <figcaption>歡樂氣氛</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 報名表單 -->
+    <section id="register" class="section section-alt">
+      <div class="container container-narrow">
+        <h2 class="section-title">活動報名</h2>
+        <p class="section-desc">請填寫以下資料完成報名，送出後將寫入 Google Sheet「2026活動報名」。</p>
+        <form id="signup-form" novalidate>
+          <div class="form-row">
+            <label for="name">姓名</label>
+            <input id="name" name="name" type="text" autocomplete="name" required placeholder="請輸入姓名" />
+            <p class="field-error" data-error-for="name"></p>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="name@example.com" />
+            <p class="field-error" data-error-for="email"></p>
+          </div>
+          <div class="form-row">
+            <label for="phone">電話</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="0912-345-678" />
+            <p class="field-error" data-error-for="phone"></p>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">送出報名</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 活動報名 · 活動設計・半馬拉松跑步</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
