@@ -1,7 +1,7 @@
 /* 2026 活動報名 — 表單驗證與送出（寫入 Google Sheet 的 Apps Script Web App） */
 
 // Apps Script Web App 部署完成後，會由此部署流程自動更新為實際 URL
-const APPS_SCRIPT_URL = "PENDING_APPS_SCRIPT_URL";
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw1QZGoSCD2IoucH5DJFIRR7RSdXLYvS5I64PkvJ2Ww6UlBZhgkXcomJWLQ9gheshFq/exec";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 // 電話以「文字」處理：允許數字、+、-、空格、括號

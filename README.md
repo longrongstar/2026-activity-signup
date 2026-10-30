@@ -1,6 +1,6 @@
 # 2026 活動報名｜活動設計・半馬拉松跑步
 
-簡約北歐風格的活動報名網站。表單送出後，資料寫入 Google Sheet「**2026活動報名**」（第一列為標題列）。
+簡約北歐風格的活動報名網站。表單送出後，資料寫入 Google Sheet「**2026running**」（第一列為標題列）。
 
 ## 網站網址（GitHub Pages）
 
@@ -17,7 +17,7 @@
 
 ## 後端部署（Google Apps Script）
 
-1. 建立 Google Sheet，檔名：**2026活動報名**
+1. 建立 Google Sheet，檔名：**2026running**
 2. 選單「擴充功能」→「Apps Script」，貼上 [apps-script/Code.gs](apps-script/Code.gs) 全部內容並儲存
 3. 「部署」→「新增部署作業」→ 類型「**網路應用程式**」
    - 執行身分：我本人
@@ -27,5 +27,5 @@
 
 ## 備註
 
-- GitHub 不支援中文字元的 repo 名稱，故 repo 採用 `2026-activity-signup`（對應 Google Sheet 檔名「2026活動報名」）。
+- GitHub repo 為 `2026-activity-signup`；Google Sheet 檔名為「2026running」。
 - `spec/` 資料夾依需求未推送至 GitHub。

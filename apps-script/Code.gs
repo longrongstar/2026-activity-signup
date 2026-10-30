@@ -1,8 +1,8 @@
 /**
- * 2026活動報名 — Google Apps Script Web App
+ * 2026running — Google Apps Script Web App
  *
  * 部署方式（容器綁定指令碼）：
- *   1. 建立 Google Sheet，檔名：2026活動報名
+ *   1. 建立 Google Sheet，檔名：2026running
  *   2. 選單「擴充功能」→「Apps Script」，貼上本檔案全部內容
  *   3. 「部署」→「新增部署作業」→ 類型「網路應用程式」
  *      - 執行身分：我本人
@@ -18,7 +18,7 @@ var SHEET_NAME = "報名資料";
 var HEADERS = ["姓名", "Email", "電話", "報名時間"];
 
 function doGet() {
-  return json_({ result: "ok", service: "2026活動報名" });
+  return json_({ result: "ok", service: "2026running" });
 }
 
 function doPost(e) {
@@ -50,6 +50,10 @@ function doPost(e) {
 /** 取得（或建立）寫入用的工作表 */
 function getSheet_() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
+  if (!ss) {
+    // 非容器綁定時，以試算表 ID 開啟（請填入實際 ID）
+    ss = SpreadsheetApp.openById("1dReNn0ibWu-DNvaYp_G0zNjroP0iqHdpByjIKPyJBfE");
+  }
   return ss.getSheetByName(SHEET_NAME) || ss.insertSheet(SHEET_NAME);
 }
 
